@@ -1,0 +1,33 @@
+include ./common/_mixins
+block variables
+
+doctype html
+html(lang="Ru ru")
+	head
+		meta(charset="utf-8")
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
+		meta(content="width=device-width, initial-scale=1" name="viewport")
+		title 
+		link(rel='stylesheet' href='css/main.css')
+	
+	body
+	
+		.wrapper
+			include ./common/header.pug
+			include ./common/promo.pug
+			include ./common/about.pug
+			include ./common/portfolio.pug
+			include ./common/features.pug
+			include ./common/clints.pug
+			include ./common/teamwork.pug
+			include ./common/skills.pug
+			include ./common/services.pug
+			include ./common/plans.pug
+			include ./common/blog.pug
+			include ./common/contacts.pug
+			include ./common/footer.pug
+				
+	
+	
+	script(src='js/scripts.js')
+

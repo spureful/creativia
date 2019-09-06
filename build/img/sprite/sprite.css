@@ -1,0 +1,143 @@
+. {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.-about-check {
+    width: 13px;
+    height: 10px;
+    background-position: -5px -5px;
+}
+
+.-about-check-pink {
+    width: 13px;
+    height: 10px;
+    background-position: -28px -5px;
+}
+
+.-about-done {
+    width: 88px;
+    height: 76px;
+    background-position: -51px -5px;
+}
+
+.-about-heart {
+    width: 88px;
+    height: 76px;
+    background-position: -149px -5px;
+}
+
+.-about-hot {
+    width: 88px;
+    height: 76px;
+    background-position: -247px -5px;
+}
+
+.-about-phone {
+    width: 88px;
+    height: 76px;
+    background-position: -345px -5px;
+}
+
+.-blog-admin {
+    width: 13px;
+    height: 16px;
+    background-position: -443px -5px;
+}
+
+.-blog-arrow {
+    width: 21px;
+    height: 14px;
+    background-position: -466px -5px;
+}
+
+.-blog-comment {
+    width: 15px;
+    height: 13px;
+    background-position: -497px -5px;
+}
+
+.-blog-view {
+    width: 17px;
+    height: 12px;
+    background-position: -522px -5px;
+}
+
+.-clints-codecanyon {
+    width: 32px;
+    height: 28px;
+    background-position: -549px -5px;
+}
+
+.-clints-graphicriver {
+    width: 38px;
+    height: 43px;
+    background-position: -591px -5px;
+}
+
+.-clints-photodune {
+    width: 32px;
+    height: 34px;
+    background-position: -639px -5px;
+}
+
+.-clints-videohive {
+    width: 31px;
+    height: 32px;
+    background-position: -681px -5px;
+}
+
+.-feuatures-fig {
+    width: 37px;
+    height: 33px;
+    background-position: -722px -5px;
+}
+
+.-feuatures-fig-active {
+    width: 37px;
+    height: 32px;
+    background-position: -769px -5px;
+}
+
+.-services--development {
+    width: 31px;
+    height: 23px;
+    background-position: -816px -5px;
+}
+
+.-services-applications {
+    width: 23px;
+    height: 28px;
+    background-position: -857px -5px;
+}
+
+.-services-css {
+    width: 24px;
+    height: 28px;
+    background-position: -890px -5px;
+}
+
+.-services-design {
+    width: 23px;
+    height: 24px;
+    background-position: -924px -5px;
+}
+
+.-services-fig-grey {
+    width: 66px;
+    height: 57px;
+    background-position: -957px -5px;
+}
+
+.-services-responsive- {
+    width: 35px;
+    height: 24px;
+    background-position: -1033px -5px;
+}
+
+.-services-wordpress {
+    width: 35px;
+    height: 35px;
+    background-position: -1078px -5px;
+}

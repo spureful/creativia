@@ -1,0 +1,194 @@
+.promo {
+    width: 100%;
+    min-height: 630px;
+
+    background: url(../img/promo/promo-bg.jpg) center center no-repeat;
+
+    background-size: cover;
+
+
+
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(#000, 0.7);
+    }
+}
+
+.promo__slider {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+
+    
+//    overflow: hidden;
+}
+
+.promo__slide {
+    width: 100%;
+    margin: 0 auto;
+    flex: 1 0 auto;
+    
+    opacity: 0;
+    
+    transition: 1s;
+    
+    position: relative;
+    z-index: -1;
+}
+
+.promo__slide.active {
+    opacity: 1;
+}
+
+
+.promo__title {
+    @include title(#fff);
+    padding-top: 185px;
+    margin-bottom: 45px;
+
+    @include tablet {
+        padding-top: 100px;
+    }
+
+}
+
+.promo__title_pink {
+    @include title($pink);
+
+}
+
+.promo__content {
+
+    color: #fff;
+    font-family: 'lato', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+
+    margin-bottom: 40px;
+    
+    @include tablet {
+        text-align: justify;
+    }
+    
+    @include phone {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        text-align: justify;
+    }
+}
+
+.promo__btns {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    z-index: 10;
+
+    @include phone {
+        flex-direction: column;
+
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+.promo__btn {
+    @include btn(#000);
+    margin-right: 30px;
+
+    @include phone {
+        margin-right: 0;
+    }
+}
+
+.promo__btn_right {
+    @include btn($pink);
+
+    @include phone {
+        margin-bottom: 30px;
+    }
+
+    &:hover {
+        background-color: #000;
+    }
+}
+
+.promo__btn_left {
+    &:hover {
+        background-color: $pink;
+    }
+}
+
+.promo__slide-arrow {
+    width: 17px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    border-top: 5px solid #a4a4a4;
+    border-left: 5px solid #a4a4a4;
+
+    border-radius: 3px;
+
+    transform: rotate(-45deg);
+    
+    
+
+    //    align-self: center;
+
+    position: absolute;
+    top: 70%;
+
+
+    transition: 1s;
+
+   
+    &:hover {
+        border-top: 5px solid $pink;
+        border-left: 5px solid $pink;
+    }
+    
+     @include netbook {
+//        margin-top: 25%;
+    }
+
+    @include tablet {
+//        margin-top: 200px;
+    }
+
+
+    @include phone {
+//        margin-top: 250px;
+    }
+
+}
+
+
+.promo__slide-arrow_left {
+     left: -10%;
+}
+.promo__slide-arrow_right {
+    transform: rotate(135deg);
+//    left: 0;
+    right: -10%;
+}

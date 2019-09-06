@@ -1,0 +1,193 @@
+.contacts {
+    padding-top: 105px;
+}
+
+.contacts__title {
+    @include title($black);
+    margin-bottom: 50px;
+}
+
+.contacts__title-pink {
+    @include title($pink);
+}
+
+.contacts__decsr {
+    @include decsr(#505050);
+    margin-bottom: 98px;
+}
+
+.contacts__descr-pink {
+    @include decsr($pink);
+}
+
+.contacts__wrap {
+    min-height: 575px;
+
+    position: relative;
+
+    background-color: grey;
+}
+
+.contacts__map {
+    width: 100%;
+    height: 100%;
+    background-color: $pink;
+}
+
+.contacts__info {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    padding: 33px 102px 46px 22px;
+    background-color: $black;
+
+    &:before {
+        content: '';
+
+
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 50px 15px 0 15px;
+        border-color: $black transparent transparent transparent;
+
+        position: absolute;
+        top: 100%;
+        right: 30px;
+
+        transform: skewX(-30deg);
+        
+        @include phone {
+            display: none;
+        }
+
+    }
+    
+    @include netbook {
+        left: 8%;
+    }
+    
+    @include tablet {
+        padding: 15px 30px;
+        left: 3%;
+    }
+    
+    @include phone {
+        width: 100%;
+//        top: 0;left: 0;
+        font-size: 18px;
+        
+        position: static;
+    }
+}
+
+.contacts__info-row {
+    display: block;
+    color: #fff;
+
+    text-decoration: none;
+    font-family: "Myriad Pro", arial, sans-serif;
+    margin-bottom: 7px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.contacts__form {
+    position: absolute;
+
+    background-color: #fff;
+
+    bottom: 0;
+    right: 250px;
+
+    padding: 50px 48px 47px 43px;
+
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    
+    @include netbook {
+        right: 8%;
+    }
+    
+    @include tablet {
+        padding: 30px 15px;
+        right: 3%;
+        min-width: 40%;
+    }
+    
+    @include phone {
+//        right: 0;
+        width: 100%;
+        
+        position: static;
+       
+    }
+}
+
+
+.contacts__form-title {
+
+    color: $black;
+    font-family: raleway, arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    margin-bottom: 48px;
+}
+
+.contacts__input {
+    width: 380px;
+    height: 35px;
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+
+    color: #505050;
+    font-family: lato, arial, sans-serif;
+
+    margin-bottom: 15px;
+
+    padding: 12px 16px;
+
+   
+
+    &:focus {
+        border: 2px solid $black;
+    }
+    
+    @include tablet {
+        width: 100%;
+    }
+}
+
+
+.contacts__input--ta {
+    resize: none;
+    min-height: 88px;
+      margin-bottom: 25px;
+}
+
+.contacts__btn {
+    @include btn($black);
+    width: 120px;
+    align-self: flex-end;
+    
+    transition: 1s;
+    
+    &:hover {
+        background-color: $pink;
+    }
+//    margin-bottom: 47px;
+    
+    @include phone {
+        margin: 0 auto;
+        width: 100%;
+    }
+}

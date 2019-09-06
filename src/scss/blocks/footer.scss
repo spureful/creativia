@@ -1,0 +1,36 @@
+.footer {
+    background-color: $black;
+    padding: 30px 0;
+
+    .container {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: flex-end;
+
+//        position: relative;
+    }
+}
+
+.logo--footer {
+    width: 120px;
+    height: 23px;
+
+//    left: 550px;
+    
+    position: static;
+    margin: 0 auto;
+
+    opacity: .5;
+
+
+}
+
+.footer__text {
+
+    color: #8e8e8e;
+    font-family: "Myriad Pro", arial, sans-serif;
+
+}

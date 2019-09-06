@@ -1,0 +1,94 @@
+@function rem($px: 16px) {
+    @return ($px / 16px) + rem;
+}
+
+@mixin netbook {
+    @media screen and (max-width: 1295px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 950px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (max-width: 490px) {
+        @content;
+    }
+}
+
+
+@mixin btn($color) {
+    background-color: $color;
+    color: #fff;
+    font-family: raleway, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    padding: 2% 5%;
+
+    transition: 1s;
+     
+}
+
+
+@mixin title($fontColor) {
+     text-align: center;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: $fontColor;
+    
+    margin: 0 auto;
+}
+
+@mixin line($lineColor)
+ {
+    width: 50%;
+    height: 1px;
+    background-color: $lineColor;
+    position: relative;
+    margin: 0 auto;
+}
+
+@mixin lineIcon($lineIcon) {
+
+    width: 21px;
+    height: 19px;
+    fill: $lineIcon;
+    margin: 0 auto;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 
+}
+
+@mixin decsr($descrColor) {
+    font-family: lato, arial, sans-serif;
+    color: $descrColor;
+    font-weight: 700;
+    text-align: center;
+    
+    @include phone {
+        
+        text-align: justify;
+        font-size: 18px;
+       
+    }
+}
+
+@mixin text($textColor) {
+    font-family: lato, arial, sans-serif;
+    color: $textColor;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+$pink: #ff0036;
+$black: #262626;

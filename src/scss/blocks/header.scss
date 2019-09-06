@@ -1,0 +1,268 @@
+.header {
+    width: 100%;
+    min-height: 70px;
+    background-color: #000;
+    
+    @include tablet {
+//        position: fixed;
+//        top: 0;
+    }
+   
+
+}
+
+.header__container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 100%;
+    min-height: 70px;
+
+    position: relative;
+
+    padding-right: 10%;
+
+    @include netbook {
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    @include tablet {
+        padding: 0 55px;
+    }
+}
+
+.logo {
+
+    position: absolute;
+    top: 0;
+    left: 8%;
+    z-index: 10;
+
+
+    width: 251px;
+    height: 113px;
+    background-image: url(../img/header/logo-bg.svg);
+
+    @include netbook {
+        background-image: none;
+        position: static;
+        height: 100%;
+
+    }
+
+
+}
+
+.logo__img {
+    margin: 35px 0 0 66px;
+    position: relative;
+    z-index: 20;
+
+    @include netbook {
+        margin: 0;
+
+
+    }
+
+
+}
+
+.nav {}
+
+.nav__btn {
+    display: none;
+
+    @include tablet {
+        display: block;
+        width: 40px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        position: relative;
+
+        .nav__btn-line,
+        .nav__btn-line:before,
+        .nav__btn-line:after {
+            width: 40px;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 3px;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+            transition: 0.7s;
+        }
+
+        .nav__btn-line:before,
+        .nav__btn-line:after {
+            content: '';
+            margin: 0;
+        }
+
+        .nav__btn-line:before {
+            top: -10px;
+        }
+
+        .nav__btn-line:after {
+            top: 10px;
+        }
+
+        &:hover {
+
+            .nav__btn-line,
+            .nav__btn-line:before,
+            .nav__btn-line:after {
+                background-color: $pink;
+            }
+        }
+
+
+    }
+
+}
+
+.nav__list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    @include tablet {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        z-index: 20;
+
+        background-color: #000;
+        width: 100%;
+        height: 100vh;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        display: none;
+
+        opacity: 0;
+        transition: 1s;
+    }
+}
+
+
+.nav__item {
+    margin-right: 30px;
+
+    @include netbook {
+        margin-right: 20px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablet {
+        margin-right: 0;
+
+        margin-bottom: 40px;
+    }
+
+    &:hover {
+        .nav__link {
+            color: #fff;
+            position: relative;
+
+            &:after,
+            &:before {
+                content: '';
+                display: block;
+                width: 50%;
+                height: 2px;
+                background-color: #ff0036;
+
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &:after {
+                bottom: -100%;
+            }
+
+            &:before {
+                top: -100%;
+            }
+        }
+
+    }
+
+
+}
+
+.nav__link {
+
+    color: #a4a4a4;
+    font-family: Raleway;
+    font-size: 18px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.07px;
+    white-space: nowrap;
+
+    transition: 1s;
+
+
+    &:before,
+    &:after {
+        transition: 1s;
+    }
+
+    @include tablet {
+        font-size: 24px;
+    }
+}
+
+
+.nav.active {
+    @include tablet {
+        .nav__list {
+            display: flex;
+//            opacity: 1;
+            
+            
+                 }
+
+        .nav__btn {
+            .nav__btn-line {
+           background-color: transparent;
+            }
+
+            .nav__btn-line:after {
+                transition: 1s;
+             
+                transform: rotate(-45deg);
+                top: 50%;
+            }
+
+            .nav__btn-line:before {
+                         
+                transition: 1s;
+                
+                transform: rotate(45deg);
+                top: 50%;
+            }
+        }
+    }
+}

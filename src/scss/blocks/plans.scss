@@ -1,0 +1,201 @@
+.plans {
+    padding-top: 105px;
+    
+    @include tablet {
+        padding-top: 50px;
+    }
+}
+
+.plans__title {
+    @include title($black);
+    margin-bottom: 45px;
+}
+
+.plans__title-pink {
+    @include title($pink);
+}
+
+.plans__descr {
+    @include decsr(#505050);
+    margin-bottom: 97px;
+
+    @include tablet {
+        margin-bottom: 50px;
+    }
+}
+
+.plans__descr-pink {
+    @include decsr($pink);
+}
+
+.plans__list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 100px;
+
+    @include tablet {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+}
+
+.plans__item {
+    width: 25%;
+    margin-right: 30px;
+
+    border: 1px solid #e7e7e7;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablet {
+        margin-right: 0;
+        margin-bottom: 30px;
+        width: 48%;
+    }
+    
+    @include phone {
+        width: 100%;
+    }
+}
+
+.plans__item-title {
+    background-color: $black;
+
+
+    color: #fff;
+    font-family: raleway, arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+
+    padding: 15px 0;
+
+
+}
+
+.plans__price {
+    background-color: #f2f2f2;
+
+
+    color: $black;
+    font-family: latoblack, arial, sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+.plans__year {
+
+    font-family: lato, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.75px;
+
+    margin-left: 9px;
+}
+
+.plans__row {
+
+    border-bottom: 1px solid #e7e7e7;
+    padding: 18px 0;
+
+    text-align: center;
+
+    color: $black;
+    font-family: Lato, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.plans__btn {
+    padding: 12px 52px;
+    background-color: $black;
+
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Raleway, arial, sans-serif;
+    font-size: 18px;
+
+    transition: .7s;
+
+    &:hover {
+        background-color: $pink;
+    }
+}
+
+
+.plans__item.active {
+    .plans__price {
+        background-color: $pink;
+        color: #fff;
+    }
+
+    .plans__year {
+        color: #fff;
+    }
+
+    .plans__btn {
+        background-color: $pink;
+        color: #fff;
+    }
+}
+
+.plans__block {
+    background-color: $black;
+    background-image: url(../img/plans/twitter.png);
+    background-repeat: no-repeat;
+    background-position: 30px bottom;
+    text-align: center;
+    
+    @include tablet {
+        background-size: 30%
+    }
+}
+
+.plans__twitter {
+    margin: 100px auto 25px auto;
+    fill: $pink;
+    width: 39px;
+    height: 31px;
+    
+    @include tablet {margin-top: 50px;}
+
+
+
+}
+
+.plans__text {
+    @include text(#fff);
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 95px;
+    
+    @include tablet {
+        width: 85%;
+        font-size: 20px;
+    }
+    
+    @include phone {
+        width: 90%;
+        font-size: 22px;
+    }
+}
+
+.plans__line {
+    @include line($pink);
+}
+
+.plans__line-icon {
+    @include lineIcon($pink);
+}

@@ -1,0 +1,219 @@
+.services {
+    background-color: #272727;
+    padding-top: 100px;
+}
+
+.services__title {
+    @include title(#fff);
+
+    margin-bottom: 50px;
+}
+
+.services__title-pink {
+    @include title($pink);
+}
+
+.services__desr {
+    margin-bottom: 97px;
+
+    @include decsr(#a4a4a4);
+}
+
+.services__descr-pink {
+    @include decsr($pink);
+}
+
+.services__list {
+    margin-bottom: 45px;
+
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+}
+
+.services__item {
+    width: 49%;
+    margin-bottom: 55px;
+
+
+    &:hover {
+        .services__icon {
+            fill: $pink;
+        }
+
+        .services__item-descr {
+            background-color: rgba($pink, 0.1);
+            color: #fff;
+        }
+    }
+
+
+    @include phone {
+        width: 100%;
+    }
+
+}
+
+.services__row {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 40px;
+
+    @include tablet {
+        flex-direction: column;
+        margin-bottom: 30px;
+
+    }
+
+}
+
+.services__wrap {
+    position: relative;
+
+    &:before {
+        content: '';
+
+        background-image: url(../img/sprite/sprite.png);
+        background-repeat: no-repeat;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @include tablet {
+        margin-bottom: 30px;
+    }
+}
+
+.services__icon {
+
+    width: 66px;
+    height: 57px;
+    fill: #a4a4a4;
+
+    transition: .7s;
+
+
+
+
+}
+
+
+
+.services__item-title {
+    margin-left: 30px;
+
+    color: #fff;
+    font-family: Raleway, arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @include tablet {
+        margin-left: 0;
+    }
+}
+
+.services__item-descr {
+
+    background-color: rgba(#a4a4a4, 0.1);
+
+
+    color: #a4a4a4;
+    font-family: Lato, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+
+    padding: 31px 26px 34px 37px;
+
+    transition: .7s;
+
+}
+
+.services__item.active {
+
+    .services__icon {
+        fill: $pink;
+    }
+
+    .services__item-descr {
+        background-color: rgba($pink, 0.1);
+        color: #fff;
+    }
+}
+
+.services__wrap--dev {
+
+    &:before {
+        width: 31px;
+        height: 23px;
+        background-position: -816px -5px;
+    }
+}
+
+.services__wrap--css {
+
+    &:before {
+        width: 24px;
+        height: 28px;
+        background-position: -890px -5px;
+    }
+}
+
+.services__wrap--wordpress {
+
+    &:before {
+        width: 35px;
+        height: 35px;
+        background-position: -1078px -5px;
+    }
+}
+
+.services__wrap--applications {
+
+    &:before {
+        width: 23px;
+        height: 28px;
+        background-position: -857px -5px;
+    }
+}
+
+.services__wrap--design {
+
+    &:before {
+        width: 23px;
+        height: 24px;
+        background-position: -924px -5px;
+    }
+}
+
+.services__wrap--responsive {
+
+    &:before {
+        width: 35px;
+        height: 24px;
+        background-position: -1033px -5px;
+    }
+}
+
+.services__line {
+    @include line($pink);
+}
+
+
+.services__line-icon {
+    @include lineIcon($pink);
+}

@@ -1,0 +1,231 @@
+.portfolio {
+    background-color: #262626;
+
+}
+
+.portfolio__title {
+    @include title(#fff);
+    padding-top: 95px;
+    margin-bottom: 25px;
+}
+
+.portfolio__nav-list {
+    margin: 0 auto;
+    margin-bottom: 80px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    
+    @include phone {
+        flex-direction: column;
+        align-items: center;
+   
+    }
+}
+
+.portfolio__nav-item {
+    @include phone {
+        margin-bottom: 20px;
+    }
+}
+
+.portfolio__nav-link {
+    background-color: transparent;
+
+    color: #a4a4a4;
+
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+
+
+    transition: color 1s;
+
+    &:hover {
+        color: #ff0036;
+    }
+    
+    @include phone {
+        font-size: 18px;
+    }
+}
+
+.portfolio__nav-link_active {
+    color: #ff0036;
+}
+
+.protfolio__illustr-list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.protfolio__illustr-item {
+    min-height: 350px;
+    width: 26%;
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    &:first-child {
+        background-color: #f39943;
+        width: 28%;
+        background-image: url(../img/portfolio/cash.png);
+    }
+
+    &:nth-child(2) {
+        background-color: #3782aa;
+        width: 22%;
+        background-image: url(../img/portfolio/bank.png);
+
+    }
+
+    &:nth-child(3) {
+        background-color: #ef5d88;
+        width: 28%;
+        background-image: url(../img/portfolio/flower.png);
+    }
+
+    &:nth-child(4) {
+        background-color: #f6f0e0;
+        width: 22%;
+        background-image: url(../img/portfolio/card.png);
+    }
+
+    &:nth-child(5) {
+        background-color: #56cc82;
+
+        width: 22%;
+        background-image: url(../img/portfolio/calc.png);
+    }
+
+    &:nth-child(6) {
+        background-color: #95a5a5;
+        width: 28%;
+        background-image: url(../img/portfolio/reverse.png);
+    }
+
+    &:nth-child(7) {
+        background-color: #24b0c9;
+
+        width: 22%;
+        background-image: url(../img/portfolio/pocket.png);
+    }
+
+    &:nth-child(8) {
+        background-color: #fa8562;
+        width: 28%;
+        background-image: url(../img/portfolio/check.png);
+    }
+
+    @include netbook {
+
+        background-position: right -40px center;
+
+        &:first-child {
+            width: 26%;
+        }
+
+        &:nth-child(2) {
+            width: 24%;
+
+        }
+
+        &:nth-child(3) {
+            width: 26%;
+        }
+
+        &:nth-child(4) {
+            width: 24%;
+        }
+
+        &:nth-child(5) {
+
+            width: 24%;
+        }
+
+        &:nth-child(6) {
+            width: 26%;
+        }
+
+        &:nth-child(7) {
+
+            width: 24%;
+        }
+
+        &:nth-child(8) {
+            width: 26%;
+        }
+    }
+
+    @include tablet {
+        background-position: right center;
+
+        //        background-size: contain;
+        &:first-child {
+            width: 60%;
+        }
+
+        &:nth-child(2) {
+            width: 40%;
+            background-position: right -50px center;
+
+        }
+
+        &:nth-child(3) {
+            width: 40%;
+            background-position: right -110px center;
+
+        }
+
+        &:nth-child(4) {
+            width: 60%;
+        }
+
+        &:nth-child(5) {
+
+            width: 60%;
+        }
+
+        &:nth-child(6) {
+            width: 40%;
+            background-position: right -90px center;
+
+        }
+
+        &:nth-child(7) {
+            background-position: right -70px center;
+
+            width: 40%;
+        }
+
+        &:nth-child(8) {
+            width: 60%;
+        }
+    }
+    
+    @include phone {
+        background-position:  right  center;
+        width: 100%;
+        
+        &:first-child,  &:nth-child(2),  &:nth-child(3),  &:nth-child(4),  &:nth-child(5),  &:nth-child(6),  &:nth-child(7),  &:nth-child(8) {
+            width: 100%;
+            background-position:  right center;
+        }
+
+    }
+}
+
+.portfolio__line {
+    @include line($pink);
+}
+
+.portfolio__line-icon {
+    @include lineIcon($pink);
+}

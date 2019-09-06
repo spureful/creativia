@@ -1,0 +1,182 @@
+.skills {
+    padding-top: 105px;
+}
+
+
+.skills__title {
+    @include title(#262626);
+    margin-bottom: 45px;
+
+}
+
+.skills__title-pink {
+    @include title($pink);
+}
+
+
+.skills__descr {
+    margin-bottom: 95px;
+    @include decsr(#505050);
+    
+    @include tablet {
+        margin-bottom: 50px;
+    }
+}
+
+.skills__descr-pink {
+    @include decsr($pink);
+
+}
+
+.skills__list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    justify-content: center;
+    
+    margin-bottom: 97px;
+    
+    @include tablet {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        margin-bottom: 50px;
+    }
+}
+
+.skills__item {
+
+    width: 151px;
+
+    margin-right: 50px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+    
+     @include tablet {
+        width: 48%;
+         margin-right: 0;
+         margin-bottom: 40px;
+         
+         text-align: center;
+    }
+    
+    @include phone {
+        width: 100%;
+    }
+}
+
+.skills__wrap {
+    position: relative;
+    width: 145px;
+    height: 145px;
+
+    margin-bottom: 52px;
+    
+    @include tablet {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+.skills__numb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    color: $pink;
+    font-family: lato, arial, sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+
+
+}
+
+.skills__numb-pers {
+    color: #000;
+}
+
+.skills__name {
+    text-align: center;
+
+    color: #262626;
+    font-family: Raleway, arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+}
+
+.skills__text {
+
+
+    color: #505050;
+    font-family: Lato, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+
+    text-align: center;
+}
+
+//.skills__circle {
+//    width: 139px;
+//    height: 139px;
+//
+//    fill: #fff;
+//    stroke: $pink;
+//    stroke-width: 3px;
+//    stroke-dasharray: 251px;
+//
+//    top: 0;
+//    left: 0;
+//    right: 0;
+//    bottom: 0;
+//    margin: auto;
+//
+//    transform: rotate(180deg);
+//    z-index: 10;
+//}
+//
+//.skills__circle-grey {
+//
+//    width: 139px;
+//    height: 139px;
+//
+//    fill: #fff;
+//    stroke: #eaeaea;
+//    stroke-width: 3px;
+//
+//    top: 0;
+//    left: 0;
+//    right: 0;
+//    bottom: 0;
+//    margin: auto;
+//}
+//
+//.skills__numb {
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    right: 0;
+//    bottom: 0;
+//    margin: auto;
+//}

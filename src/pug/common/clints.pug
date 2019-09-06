@@ -1,0 +1,40 @@
+section.clints#clients
+    .container
+        h2.clints__title our 
+            span.clints__title-pink clints
+            
+        p.clints__descr
+            | Lorem ipsum dolor sit amet, consectetur 
+            span.clints__descr-pink adipiscing elit.
+            |  Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. 
+            
+        .clints__block
+            .clints__col
+                h3.clints__block-title happy clients say
+                p.clints__block-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. 
+                .clints__img-wrap
+                    +image('clints/ava.png', 'clints ava', 'clints__img')
+                h4.clints__name amr srour
+                ul.clints__paggination
+                    li.clints__paggination-item
+                    li.clints__paggination-item.active
+                    li.clints__paggination-item
+                    
+            .clints__col
+                ul.clints__logo-list
+                    li.clints__logo-item
+                        +image('clints/graphicriver.png','logo graphicriver', 'clints__logo-img')
+                        h4.clints__logo-title graphicriver
+                    li.clints__logo-item
+                        +image('clints/videohive.png','logo videohive', 'clints__logo-img')
+                        h4.clints__logo-title videohive
+                    li.clints__logo-item
+                        +image('clints/photodune.png','logo photodune', 'clints__logo-img')
+                        h4.clints__logo-title photodune
+                    li.clints__logo-item
+                        +image('clints/codecanyon.png','logo codecanyon', 'clints__logo-img')
+                        h4.clints__logo-title codecanyon
+        .clints__line
+            +icon('figure', 'clints__line-icon' )
+            
+    

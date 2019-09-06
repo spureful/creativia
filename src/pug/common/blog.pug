@@ -1,0 +1,74 @@
+section.blog#blog
+    .container
+        h2.blog__title our 
+            span.blog__title-pink Blog
+            
+        p.blog__descr
+            | Lorem ipsum dolor sit amet, consectetur 
+            span.blog__descr-pink adipiscing elit.  
+            | Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.
+            
+        ul.blog__list
+            li.blog__item
+                .blog__img-wrap
+                    +image('blog/item-1.png', 'item 1', 'blog__img')
+                .blog__col
+                    h3.blog__item-title Lorem ipsum dolor sit amet, consectetur 
+                    ul.blog__stat-list
+                        li.blog__stat.blog__stat--admin admin
+                            
+                        li.blog__stat.blog__stat--comment 1205
+                           
+                        li.blog__stat.blog__stat--view 1205
+                    p.blog__text Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus ...
+                    button.blog__btn.active(type='button') view more
+            li.blog__item
+                .blog__img-wrap
+                    +image('blog/item-2.png', 'item 2', 'blog__img')
+                .blog__col
+                    h3.blog__item-title Lorem ipsum dolor sit amet, consectetur 
+                    ul.blog__stat-list
+                        li.blog__stat.blog__stat--admin admin
+                            
+                        li.blog__stat.blog__stat--comment 1205
+                           
+                        li.blog__stat.blog__stat--view 1205
+                    p.blog__text Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus ...
+                    button.blog__btn(type='button') view more
+                    
+    button.blog__arrow(type='button')
+                            
+    .blog__follow
+        
+        h2.blog__follow-title Follow 
+           span.blog__follow-title-pink Creativia
+           
+        ul.blog__socials-list
+            li.blog__socials-item
+                .blog__socials-wrap
+                    +icon('figure', 'blog__figure-icon')
+                    +icon('fb', 'blog__social-icon blog__social-icon--fb')
+                .blog__socials-numb 20000
+                
+            li.blog__socials-item
+                .blog__socials-wrap
+                    +icon('figure', 'blog__figure-icon')
+                    +icon('twitter', 'blog__social-icon blog__social-icon--twitter')
+                .blog__socials-numb 99900
+                
+            li.blog__socials-item
+                .blog__socials-wrap
+                    +icon('figure', 'blog__figure-icon')
+                    +icon('pinterest', 'blog__social-icon blog__social-icon--pinterest')
+                .blog__socials-numb 5000
+                
+            li.blog__socials-item
+                .blog__socials-wrap
+                    +icon('figure', 'blog__figure-icon')
+                    +icon('google', 'blog__social-icon blog__social-icon--google')
+                .blog__socials-numb 5000
+                
+    .blog__line
+        +icon('figure', 'blog__line-icon' )
+                
+                
