@@ -1,6 +1,11 @@
-import blockHeight from './modules/teamworkHeight'
-import './modules/hamburgerMenu'
-import './modules/promoSlider'
+import './vue'
+import blockHeight from './teamworkHeight'
+import './hamburgerMenu'
+import './promoSlider'
+import './map'
+import './about'
+
+
 
 
 

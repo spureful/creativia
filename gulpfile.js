@@ -13,8 +13,9 @@ const del = require("del");
 const browserSync = require("browser-sync").create();
 const reload = browserSync.reload;
 
-const webpack = require("webpack");
 const $webpack = require("webpack-stream");
+const webpack = require("webpack");
+
 
 
 gulp.task('pug', function () {

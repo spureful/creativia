@@ -2,6 +2,7 @@
 
 (function sliderPromo() {
 
+ 
     const slider = document.querySelector('.promo__slider');
     const slides = document.querySelectorAll('.promo__slide');
     const btnBack = document.querySelector('.promo__slide-arrow_left');
@@ -17,8 +18,6 @@
 
 
     btnBack.addEventListener('click', function (e) {
-        console.log(currentSlide);
-        console.log(sliderWidth);
 
 
 
@@ -52,9 +51,6 @@
 
     btnForward.addEventListener('click', function (e) {
 
-
-        console.log(currentSlide);
-        console.log(sliderWidth);
 
 
         if  (currentSlide == 0) {

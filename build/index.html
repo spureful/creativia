@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title> </title>
+    <title></title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -56,31 +57,43 @@
           <p class="about__desr">
              Lorem ipsum dolor sit amet, consectetur  <span class="about__desr-pink">adipiscing elit. </span>Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. </p>
           <div class="about__content">
-            <div class="about__content-left">
-              <p class="about__content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae, </p>
-              <ul class="about__content-list">
-                <li class="about__content-item about__content-item_active">
-                  <div class="about__content-row">
-                    <button class="about__content-btn"></button>
-                    <h3 class="about__content-titlerow">Hwo is creativia</h3>
+            <div class="about__content-left"> 
+              <p class="about__content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae,</p>
+              <div class="we" id="about__content-leftid">
+                <script type="text/x-template" id="about__content-listid">
+                  <ul class="about__content-list">
+                    <li class="about__content-item" v-for="itemComp in itemContent" ref="item-block">
+                      <vueComp :itemComp="itemComp"></vueComp>
+                    </li>
+                  </ul>
+                </script>
+                <!--            .about__content-component-->
+                <!--                .about__content-row-->
+                <!--                    button.about__content-btn-->
+                <!--                    h3.about__content-titlerow Hwo is creativia -->
+                <!--                .about__content-textrow  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.-->
+                <!--        li.about__content-item-->
+                <!--            .about__content-component-->
+                <!--                .about__content-row-->
+                <!--                    button.about__content-btn-->
+                <!--                    h3.about__content-titlerow Experiences-->
+                <!--                .about__content-textrow             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.-->
+                <!--        li.about__content-item-->
+                <!--            .about__content-component-->
+                <!--                .about__content-row-->
+                <!--                    button.about__content-btn-->
+                <!--                    h3.about__content-titlerow Learn more-->
+                <!--                .about__content-textrow             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum os.-->
+                <script type="text/x-template" id="about__content-component">
+                  <div class="about__content-component" ref="item-active">
+                    <div class="about__content-row">
+                      <button class="about__content-btn" v-on:click="openItem"></button>
+                      <h3 class="about__content-titlerow">{{itemComp.contentTitle}}</h3>
+                    </div>
+                    <div class="about__content-textrow">{{itemComp.contentText}}  </div>
                   </div>
-                  <div class="about__content-textrow">            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.</div>
-                </li>
-                <li class="about__content-item">
-                  <div class="about__content-row">
-                    <button class="about__content-btn"></button>
-                    <h3 class="about__content-titlerow">Experiences</h3>
-                  </div>
-                  <div class="about__content-textrow">            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.</div>
-                </li>
-                <li class="about__content-item">
-                  <div class="about__content-row">
-                    <button class="about__content-btn"></button>
-                    <h3 class="about__content-titlerow">Learn more</h3>
-                  </div>
-                  <div class="about__content-textrow">            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.</div>
-                </li>
-              </ul>
+                </script>
+              </div>
             </div>
             <div class="about__content-right">
               <ul class="about__img-list">
@@ -98,28 +111,6 @@
               <use xlink:href="img/icons/sprite.svg#figure"></use>
             </svg>
           </div>
-          <ul class="about__list">
-            <li class="about__item">
-              <div class="about__list-icon"></div>
-              <h3 class="about__list-title">FLAT DESIGN</h3>
-              <p class="about__list-text">Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet  </p>
-            </li>
-            <li class="about__item">
-              <div class="about__list-icon"></div>
-              <h3 class="about__list-title">RETINA READY</h3>
-              <p class="about__list-text">Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet </p>
-            </li>
-            <li class="about__item">
-              <div class="about__list-icon"></div>
-              <h3 class="about__list-title">RESPONSIVE</h3>
-              <p class="about__list-text">Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet  </p>
-            </li>
-            <li class="about__item">
-              <div class="about__list-icon"></div>
-              <h3 class="about__list-title">Clean & useful</h3>
-              <p class="about__list-text">Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus eget mauris fusce sit amet </p>
-            </li>
-          </ul>
         </div>
       </section>
       <section class="portfolio" id="portfolio">
@@ -563,7 +554,7 @@
           <p class="contacts__decsr">Lorem ipsum dolor sit amet, consectetur <span class="contacts__descr-pink">adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. </p>
         </div>
         <div class="contacts__wrap">
-          <div class="contacts__map"></div>
+          <div class="contacts__map" id="map"></div>
           <div class="contacts__info">
             <div class="contacts__info-row">egypt, creativia</div>
             <div class="contacts__info-row">Address: cairo 123</div><a class="contacts__info-row" href="tel:88002000600">Phone: +0201091915171</a><a class="contacts__info-row" href="mailto:gfx3mr@gmail.com">Email: gfx3mr@gmail.com</a>
@@ -583,7 +574,8 @@
           <div class="footer__text">Design by  Amr Srour</div>
         </div>
       </footer>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnmzO_QZ24TTTCGhY-DWz-ZBh8HBe4YA4&amp;callback=initMap"></script>
+      <script src="js/scripts.js"></script>
     </div>
   </body>
-  <script src="js/scripts.js"></script>
 </html>

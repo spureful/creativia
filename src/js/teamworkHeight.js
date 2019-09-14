@@ -1,6 +1,8 @@
 //СЕКЦИЯ teamwork, ПОДЦЕПЛЯЕМ ВЫСОТУ БЛОКА ОТ ФОТО
 
 export default function blockHeight() {
+    
+
     const block = document.querySelector('.teamwork__block');
     const imgs = document.querySelectorAll('.teamwork__img');
 
