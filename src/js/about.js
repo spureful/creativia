@@ -23,11 +23,9 @@ const vueComp = {
     methods: {
         openItem() {
                      
-              
-            
+                          
             const itemActive = this.$refs['item-active'];
-             console.log(itemActive);
-            
+                   
             itemActive.classList.toggle('about__content-item_active');
         }
     }
